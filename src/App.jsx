@@ -99,7 +99,7 @@ function App() {
     <style> @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');</style>
 
         <header id='header' className='w-screen'>
-          <div className='flex flex-row-reverse w-full text-black p-5 ml-5 rounded-xl'>
+          <div className='flex flex-row-reverse w-full text-black p-5 rounded-xl'>
             <button id='button' className='bg-black text-white text-center p-5 ml-5 rounded-xl'> <a href='#contato'>Entre em Contato</a>  </button>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#sobre'> Sobre Mim </a>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#servicos'> Serviços </a>
@@ -157,7 +157,7 @@ function App() {
         </header>
 
         {/* Hero */}
-        <section className='pb-10'>
+        <section className='pb-10 w-screen items-center'>
           <div className='w-screen max-xl:flex max-xl:flex-col max-xl:text-center'>
             <h1 id='text' className='text-black xl:ml-30 mt-10  bold'> Primeira Landing Page</h1>
             <div className='max-xl:flex max-xl:justify-center'>
