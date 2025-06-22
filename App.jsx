@@ -98,8 +98,8 @@ function App() {
     <>
     <style> @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');</style>
 
-        <header id='header' className='w-screen'>
-          <div className='w-screen flex flex-row-reverse w-full text-black p-5 rounded-xl'>
+        <div className='w-screen'>
+          <div className='flex flex-row-reverse w-full text-black p-5 rounded-xl'>
             <button id='button' className='bg-black text-white text-center p-5 ml-5 rounded-xl'> <a href='#contato'>Entre em Contato</a>  </button>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#sobre'> pinto de mendigo</a>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#servicos'> Serviços </a>
@@ -154,7 +154,7 @@ function App() {
               </div>
             </div>
           </div>
-        </header>
+        </div>
 
         {/* Hero */}
         <section className='pb-10 w-screen items-center'>
@@ -178,7 +178,7 @@ function App() {
           </div>
           <div className='xl:ml-30 max-xl:w-screen flex flex-row max-xl:flex-col'>
             <div className='max-xl:flex max-xl:w-screen max-xl:justify-center'>
-              <p className='text-gray-600 leading-7 mt-5 max-xl:text-center md:w-100'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam modi voluptatum molestiae accusamus sequi sed facere. A tempore quo veniam sunt obcaecati, repellendus corporis impedit aperiam autem explicabo magni excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, est doloribus libero impedit minus incidunt, quibusdam veniam hic explicabo tempora totam, veritatis numquam? Animi tempora dignissimos, corporis quo quibusdam officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod iure omnis dolore aliquid facere expedita dicta veniam perferendis laudantium, temporibus possimus ullam quis consectetur, incidunt id sed vel architecto?</p>
+              <p className='text-gray-600 p-5 leading-7 mt-5 max-xl:text-center md:w-100'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam modi voluptatum molestiae accusamus sequi sed facere. A tempore quo veniam sunt obcaecati, repellendus corporis impedit aperiam autem explicabo magni excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, est doloribus libero impedit minus incidunt, quibusdam veniam hic explicabo tempora totam, veritatis numquam? Animi tempora dignissimos, corporis quo quibusdam officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod iure omnis dolore aliquid facere expedita dicta veniam perferendis laudantium, temporibus possimus ullam quis consectetur, incidunt id sed vel architecto?</p>
             </div>
             <div className='xl:w-full flex flex-row-reverse max-xl:flex-col flex items-center ml-50'> 
               <img className='w-100 h-100 rounded-full max-xl:mt-20 mr-50 max-xl:w-50 max-xl:h-50' src='https://yt3.googleusercontent.com/Y9-Xwxb9G1tHzASQzWoXA3GEV26HI0s4bsfOCzod42vdd3EKlJJLRUX0vSxu8XO1RpN-vzSB=s160-c-k-c0x00ffffff-no-rj'></img>
@@ -216,7 +216,7 @@ function App() {
                 <p className='p-5 center'> Preparado para ter seu próprio site? Me contate pelo email e traga suas ideias à vida. </p>
                 
 
-                <div className='flex flex-row mt-25 max-xl:flex-col items-center w-screen'>
+                <div className='flex flex-row mt-25 max-xl:flex-col items-center w-full'>
                   <div className='flex flex-col xl:left w-1/2 max-xl:w-screen max-xl:items-center xl:ml-20'>
                   <h1 id='text' className='text-white'> Entre em contato</h1>
                   
@@ -245,12 +245,12 @@ function App() {
                   </div> 
                   </div>
 
-                  <div className='flex flex-col w-1/3 mb-2 max-xl:w-9/10 max-xl:items-center max-xl:mt-20'>
-                  <label className='mb-2 font-bold'> Nome </label>
+                  <div className='flex w-1/3 flex-col mb-2 max-xl:w-9/10 max-xl:items-center max-xl:mt-20'>
+                  <p className='mb-2 font-bold'> Nome </p>
                   <input id='inputs' name='nome' type='text' value={nameValue} onChange={handleNameInputChange} placeholder='Seu nome' className='bg-white text-black rounded-lg max-xl:w-full' ></input>
-                  <label className='mb-2 mt-10 font-bold'> Email </label>
+                  <p className='mb-2 mt-10 font-bold'> Email </p>
                   <input id='inputs' name='email' type='text' value={emailValue} onChange={handleEmailInputChange} placeholder='seuemail@email.com' className='bg-white text-black rounded-lg max-xl:w-full' ></input>
-                  <label className='mb-2 mt-10 font-bold'> Mensagem </label>
+                  <p className='mb-2 mt-10 font-bold'> Mensagem </p>
                   <textarea id='inputs' name='mensagem' maxLength='1000' value={messageValue} onChange={handleMessageInputChange} type='text' size='' placeholder='Me conte sobre seu projeto...' className='bg-white text-black rounded-lg max-xl:w-full h-25' ></textarea>
                   <div className='items-center w-full'>
                     <button id='button' onClick={() => coisa(nameValue, emailValue, messageValue)} className='p-5 w-full mt-10 bg-white text-black rounded-xl'> Enviar </button>
