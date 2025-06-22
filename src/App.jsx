@@ -99,7 +99,7 @@ function App() {
     <style> @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');</style>
 
         <header id='header' className='w-screen'>
-          <div className='flex flex-row-reverse w-full text-black p-5 rounded-xl'>
+          <div className='w-screen flex flex-row-reverse w-full text-black p-5 rounded-xl'>
             <button id='button' className='bg-black text-white text-center p-5 ml-5 rounded-xl'> <a href='#contato'>Entre em Contato</a>  </button>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#sobre'> Sobre Mim </a>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#servicos'> Serviços </a>
