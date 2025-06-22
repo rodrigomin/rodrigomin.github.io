@@ -98,8 +98,8 @@ function App() {
     <>
     <style> @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');</style>
 
-        <header id='header'>
-          <div className='flex flex-row-reverse text-black p-5 ml-5 rounded-xl'>
+        <header id='header' className='w-screen'>
+          <div className='flex flex-row-reverse w-full text-black p-5 ml-5 rounded-xl'>
             <button id='button' className='bg-black text-white text-center p-5 ml-5 rounded-xl'> <a href='#contato'>Entre em Contato</a>  </button>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#sobre'> Sobre Mim </a>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#servicos'> Serviços </a>
@@ -158,7 +158,7 @@ function App() {
 
         {/* Hero */}
         <section className='pb-10'>
-          <div className='max-xl:flex max-xl:flex-col max-xl:text-center'>
+          <div className='w-screen max-xl:flex max-xl:flex-col max-xl:text-center'>
             <h1 id='text' className='text-black xl:ml-30 mt-10  bold'> Primeira Landing Page</h1>
             <div className='max-xl:flex max-xl:justify-center'>
               <p className='w-6/10 mt-4 leading-7 text-gray-600 mb-5 xl:ml-30'> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem saepe quos ducimus voluptate animi quod laudantium impedit, dignissimos corporis! Obcaecati iure totam iste praesentium accusantium nostrum rem eaque magnam impedit?</p>
@@ -167,7 +167,7 @@ function App() {
           <div className='max-xl:flex max-xl:justify-center max-xl:m-0'>
             <button id='button' className='bg-black text-white text-center p-5 pl-10 pr-10 xl:ml-30 rounded-xl'> <a href='https://youtu.be/PJBOVzA0S1Q'>Assistir Vídeo de Apresentação</a> </button>
           </div>
-          <div id='hero_img' className='flex justify-center'>
+          <div id='hero_img' className='w-screen flex justify-center'>
             <img className='bg-[url(https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)] mt-10 rounded-xl w-18/20 h-[200px] bg-cover bg-center bg-no-repeat mb-8 md:h-[250px]'></img>
           </div>
         </section>
@@ -191,7 +191,7 @@ function App() {
                 <h1 id='text' className='text-black'> O que posso oferecer </h1>
                 <p className='text-gray-600 text-lg mt-5 text-center'> Obviamente os serviços que eu posso prestar com meu nível de conhecimento. </p>
               </div>
-            <div className='flex flex-row max-xl:flex-col drop-shadow-lg drop-shadow-gray-500/50'>
+            <div className='w-screen flex flex-row max-xl:flex-col drop-shadow-lg drop-shadow-gray-500/50'>
               <div id='card' className='opacity-0 m-10 bg-white text-black p-5 rounded-xl'>
                 <Code className='text-gray-500'></Code>
                 <h1 id='text' className='mb-5 mt-2'>Landing Pages/Sites </h1>
@@ -216,7 +216,7 @@ function App() {
                 <p className='p-5 center'> Preparado para ter seu próprio site? Me contate pelo email e traga suas ideias à vida. </p>
                 
 
-                <div className='flex flex-row mt-25 max-xl:flex-col max-xl:items-center xl:w-screen'>
+                <div className='flex flex-row mt-25 max-xl:flex-col items-center w-screen'>
                   <div className='flex flex-col xl:left w-1/2 max-xl:w-screen max-xl:items-center xl:ml-20'>
                   <h1 id='text' className='text-white'> Entre em contato</h1>
                   
