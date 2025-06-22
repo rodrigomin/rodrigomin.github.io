@@ -101,7 +101,7 @@ function App() {
         <div className='w-screen'>
           <div className='flex flex-row-reverse w-full text-black p-5 rounded-xl'>
             <button id='button' className='bg-black text-white text-center p-5 ml-5 rounded-xl'> <a href='#contato'>Entre em Contato</a>  </button>
-            <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#sobre'> pinto de mendigo</a>
+            <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#sobre'> Sobre Mim</a>
             <a id='button' className='text-black p-5 mr-10 cursor-pointer max-xl:hidden' href='#servicos'> Serviços </a>
             <div className='flex flex-row absolute p-5 left-1 ml-5'>
               <div className='relative xl:hidden'>
