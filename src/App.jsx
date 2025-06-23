@@ -2,10 +2,9 @@ import { Profiler, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Star, Menu, X, Mail, Phone, MapPin, Code, Palette, Smartphone, CheckCircle, ChevronUp, Lightbulb, Sparkles, ClipboardPen, User, UserSearch} from 'lucide-react';
+import { Star, Menu, X, Mail, Phone, MapPin, Code, Palette, Smartphone, CheckCircle, ChevronUp, Lightbulb, Sparkles, ClipboardPen, User, UserSearch, CirclePlay} from 'lucide-react';
 import emailjs from '@emailjs/browser'
-
-
+import propaganda_video_1 from '../src/assets/propaganda_video_1.mp4'
 
 
 
@@ -16,6 +15,7 @@ function App() {
   
 
   const cards = document.querySelectorAll("#card")
+  const video = document.querySelector("#video")
   const observer = new IntersectionObserver((entries) => {
     entries.forEach ( entry => {
       entry.target.classList.toggle("show", entry.isIntersecting)
@@ -35,7 +35,10 @@ function App() {
 
   cards.forEach(card => {
     observer.observe(card)
+    console.log(video)
   })
+
+
   
 
   const [emailValue, setEmailValue] = useState("")
@@ -46,6 +49,7 @@ function App() {
   const error_num = [false, false, false]
 
   const [menu, setMenu] = useState(false)
+  const [mostrarVideo, setMostrarVideo] = useState(false)
 
   const handleNameInputChange = (event) => {setNameValue(event.target.value)}
   const handleMessageInputChange = (event) => {setMessageValue(event.target.value)}
@@ -159,17 +163,33 @@ function App() {
         {/* Hero */}
         <section className='pb-10 w-screen items-center'>
           <div className='w-screen max-xl:flex max-xl:flex-col max-xl:text-center'>
-            <h1 id='text' className='text-black xl:ml-30 mt-10  bold'> Primeira Landing Page</h1>
+            <h1 id='text' className='text-black xl:ml-30 mt-10  bold'> Landing Page </h1>
             <div className='max-xl:flex max-xl:justify-center'>
-              <p className='w-6/10 mt-4 leading-7 text-gray-600 mb-5 xl:ml-30'> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem saepe quos ducimus voluptate animi quod laudantium impedit, dignissimos corporis! Obcaecati iure totam iste praesentium accusantium nostrum rem eaque magnam impedit?</p>
+              <p className='w-6/10 mt-4 leading-7 text-gray-600 mb-5 xl:ml-30'> Landing Page ou página de aterrissagem é uma página que serve para divulgar e apresentar um evento ou produto. Essa página é um ótimo exemplo disso! Nela você coloca informações sobre o evento/produto e se quiser, pode colocar um fórmulário para contato, ou até um redirecionamento para seu site de vendas (como Hotmart ou Kiwify). No vídeo de apresentação a seguir também é brevemente explicado.</p>
             </div>
           </div>
           <div className='max-xl:flex max-xl:justify-center max-xl:m-0'>
-            <button id='button' className='bg-black text-white text-center p-5 pl-10 pr-10 xl:ml-30 rounded-xl'> <a href='https://youtu.be/PJBOVzA0S1Q'>Assistir Vídeo de Apresentação</a> </button>
+            <button id='button' className='bg-black text-white text-center p-5 pl-10 pr-10 xl:ml-30 rounded-xl' onClick={() => setMostrarVideo(true)}> Assistir Vídeo de Apresentação </button>
           </div>
-          <div id='hero_img' className='w-screen flex justify-center'>
-            <img className='bg-[url(https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)] mt-10 rounded-xl w-18/20 h-[200px] bg-cover bg-center bg-no-repeat mb-8 md:h-[250px]'></img>
-          </div>
+
+          
+          
+            
+            {mostrarVideo &&
+            <div id='video' className='flex w-screen justify-center h-screen fixed bottom-0 z-1'>
+              
+              <div className='absolute right-1 m-2 cursor-pointer z-3'><X className='text-white w-10 h-10' onClick={() => setMostrarVideo(false)}></X></div>
+              <div id='video' className='flex w-full absolute items-center relative z-2'>
+  
+                  <iframe src='https://www.youtube.com/embed/kkhe6m3cQc4' className='flex rounded-2xl h-9/10 center w-9/10'></iframe> 
+                  
+              </div>
+              <div className="loader"></div>
+              
+              
+              <div className='w-full absolute  h-full bg-black opacity-80'></div>
+            </div>
+          }
         </section>
 
         <section id='sobre' className='mt-10 mb-20'>
@@ -192,20 +212,20 @@ function App() {
                 <p className='text-gray-600 text-lg mt-5 text-center'> Obviamente os serviços que eu posso prestar com meu nível de conhecimento. </p>
               </div>
             <div className='w-screen flex flex-row max-xl:flex-col drop-shadow-lg drop-shadow-gray-500/50'>
-              <div id='card' className='opacity-0 m-10 bg-white text-black p-5 rounded-xl'>
+              <div id='card' className='opacity-0 m-10 bg-white text-black p-5 xl:w-1/3 rounded-xl'>
                 <Code className='text-gray-500'></Code>
                 <h1 id='text' className='mb-5 mt-2'>Landing Pages/Sites </h1>
-                <p className='text-gray-500'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptatibus veniam ipsa, natus maxime aut fuga nisi in quibusdam? Asperiores, earum odio! Modi, ea voluptatem blanditiis nisi fugiat deleniti mollitia.</p>
+                <p className='text-gray-500'> Como já explicado, eu crio páginas simples. Páginas como Landing Pages, Sites Institucionais, etc. Para criação dos sites eu utilizo o Vite com ReactJS e Tailwind para o design da página.</p>
               </div>
-              <div id='card' className='opacity-0 m-10 bg-white text-black p-5 rounded-xl'>
+              <div id='card' className='opacity-0 m-10 bg-white text-black xl:w-1/3 p-5 rounded-xl'>
                 <Palette className='text-gray-500'></Palette>
                 <h1 id='text' className='mb-5 mt-2'>UI Design </h1>
-                <p className='text-gray-500'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptatibus veniam ipsa, natus maxime aut fuga nisi in quibusdam? Asperiores, earum odio! Modi, ea voluptatem blanditiis nisi fugiat deleniti mollitia.</p>
+                <p className='text-gray-500'> Sou capaz de fazer os Designs da página (claro que com ajuda do cliente para tomada de decisões). Uso o Framework TailwindCSS para fazer o design do site.</p>
               </div>
-              <div id='card' className='opacity-0 m-10 bg-white text-black p-5 rounded-xl'>
+              <div id='card' className='opacity-0 m-10 bg-white text-black xl:w-1/3 p-5 rounded-xl'>
                 <Sparkles className='text-gray-500'></Sparkles>
                 <h1 id='text' className='mb-5 mt-2'>Responsividade </h1>
-                <p className='text-gray-500'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus voluptatibus veniam ipsa, natus maxime aut fuga nisi in quibusdam? Asperiores, earum odio! Modi, ea voluptatem blanditiis nisi fugiat deleniti mollitia.</p>
+                <p className='text-gray-500'> Assim como nesta Landing Page, consigo criar sites responsivos que funcionam tanto para aparelhos smartphones, quanto para computadores.</p>
               </div>
             </div>
           </section>
