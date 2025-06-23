@@ -15,8 +15,8 @@ function App() {
   
 
   const cards = document.querySelectorAll("#card")
-  const video = document.querySelector("#video")
   const observer = new IntersectionObserver((entries) => {
+    
     entries.forEach ( entry => {
       entry.target.classList.toggle("show", entry.isIntersecting)
       if (entry.isIntersecting) {
@@ -24,8 +24,8 @@ function App() {
         entry.target.classList.add("show");
         observer.disconnect()
       }
-
     })
+  
     
   }, 
   {
@@ -35,8 +35,10 @@ function App() {
 
   cards.forEach(card => {
     observer.observe(card)
-
   })
+
+  
+  
 
 
   
@@ -46,7 +48,6 @@ function App() {
   const [nameValue, setNameValue] = useState("")
 
   const info = [nameValue, emailValue, messageValue]
-  const error_num = [false, false, false]
 
   const [menu, setMenu] = useState(false)
   const [mostrarVideo, setMostrarVideo] = useState(false)
@@ -176,18 +177,15 @@ function App() {
           
             
             {mostrarVideo &&
-            <div id='video' className='flex w-screen justify-center h-screen fixed bottom-0 z-1'>
+            <div className='flex w-screen justify-center h-screen fixed bottom-0 z-1'>
               
               <div className='absolute right-1 m-2 cursor-pointer z-3'><X className='text-white w-10 h-10' onClick={() => setMostrarVideo(false)}></X></div>
-              <div id='video' className='flex w-full absolute items-center relative z-2'>
+              <div id='video' className='flex w-screen h-screen absolute items-center z-2'>
   
-                  <iframe src='https://www.youtube.com/embed/kkhe6m3cQc4' className='flex rounded-2xl h-9/10 center w-9/10'></iframe> 
+                  <iframe src='https://www.youtube.com/embed/kkhe6m3cQc4' className='flex rounded-2xl h-8/10 center w-8/10'></iframe> 
                   
               </div>
-              <div className="loader"></div>
-              
-              
-              <div className='w-full absolute  h-full bg-black opacity-80'></div>
+              <div className='w-screen absolute  h-screen bg-black opacity-80'></div>
             </div>
           }
         </section>
@@ -198,7 +196,7 @@ function App() {
           </div>
           <div className='xl:ml-30 max-xl:w-screen flex flex-row max-xl:flex-col'>
             <div className='max-xl:flex max-xl:w-screen max-xl:justify-center'>
-              <p className='text-gray-600 p-5 leading-7 mt-5 max-xl:text-center md:w-100'> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam modi voluptatum molestiae accusamus sequi sed facere. A tempore quo veniam sunt obcaecati, repellendus corporis impedit aperiam autem explicabo magni excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, est doloribus libero impedit minus incidunt, quibusdam veniam hic explicabo tempora totam, veritatis numquam? Animi tempora dignissimos, corporis quo quibusdam officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quod iure omnis dolore aliquid facere expedita dicta veniam perferendis laudantium, temporibus possimus ullam quis consectetur, incidunt id sed vel architecto?</p>
+              <p className='text-gray-600 p-5 leading-7 mt-5 max-xl:text-center md:w-100'> Meu nome é Rodrigo, sou um desenvolvedor web de 17 anos. Desde pequeno meu sonho era trabalhar com isso, então comecei a estudar sozinho, participei de Bootcamps e competições de programação embora não tivesse tanta experiência, a maioria das coisas que eu sei tive que aprender sozinho. Embora eu use ReactJS tenho noção básica de Python, já usei MongoDB pra banco de dados e até mesmo C# para projetos eletrônicos. Também tenho certa experiência com o mundo audiovisual e design, quando mais novo fazia vídeos e animações, o que me proporcionou uma certa experiência com o VISUAL. </p>
             </div>
             <div className='xl:w-full flex flex-row-reverse max-xl:flex-col flex items-center ml-50'> 
               <img className='w-100 h-100 rounded-full max-xl:mt-20 mr-50 max-xl:w-50 max-xl:h-50' src='https://yt3.googleusercontent.com/Y9-Xwxb9G1tHzASQzWoXA3GEV26HI0s4bsfOCzod42vdd3EKlJJLRUX0vSxu8XO1RpN-vzSB=s160-c-k-c0x00ffffff-no-rj'></img>
