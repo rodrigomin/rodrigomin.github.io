@@ -35,7 +35,7 @@ function App() {
 
   cards.forEach(card => {
     observer.observe(card)
-    console.log(video)
+
   })
 
 
