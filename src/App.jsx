@@ -108,7 +108,7 @@ function App() {
             <div className='flex w-screen justify-center h-screen fixed bottom-0 z-1'>
               
               <div className='absolute left-1 m-2 cursor-pointer z-3'><X className='text-white w-10 h-10' onClick={() => setMostrarVideo(false)}></X></div>
-              <div id='video' className='flex w-screen h-screen absolute items-center z-2'>
+              <div id='video' className='flex w-screen h-screen absolute items-center z-2 cursor-pointer' onClick={() => setMostrarVideo(false)}>
   
                   <iframe src='https://www.youtube.com/embed/kkhe6m3cQc4' className='flex rounded-2xl h-8/10 center w-8/10'></iframe> 
                   
