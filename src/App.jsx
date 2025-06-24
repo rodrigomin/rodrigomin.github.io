@@ -103,6 +103,19 @@ function App() {
     <>
     <style> @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');</style>
 
+
+         {mostrarVideo &&
+            <div className='flex w-screen justify-center h-screen fixed bottom-0 z-1'>
+              
+              <div className='absolute left-1 m-2 cursor-pointer z-3'><X className='text-white w-10 h-10' onClick={() => setMostrarVideo(false)}></X></div>
+              <div id='video' className='flex w-screen h-screen absolute items-center z-2'>
+  
+                  <iframe src='https://www.youtube.com/embed/kkhe6m3cQc4' className='flex rounded-2xl h-8/10 center w-8/10'></iframe> 
+                  
+              </div>
+              <div className='w-screen absolute  h-screen bg-black opacity-80'></div>
+            </div>
+        }
         <div className='w-screen'>
           <div className='flex flex-row-reverse w-full text-black p-5 rounded-xl'>
             <button id='button' className='bg-black text-white text-center p-5 ml-5 rounded-xl'> <a href='#contato'>Entre em Contato</a>  </button>
@@ -172,22 +185,6 @@ function App() {
           <div className='max-xl:flex max-xl:justify-center max-xl:m-0'>
             <button id='button' className='bg-black text-white text-center p-5 pl-10 pr-10 xl:ml-30 rounded-xl' onClick={() => setMostrarVideo(true)}> Assistir Vídeo de Apresentação </button>
           </div>
-
-          
-          
-            
-            {mostrarVideo &&
-            <div className='flex w-screen justify-center h-screen fixed bottom-0 z-1'>
-              
-              <div className='w-screen h-screen absolute left-1 m-2 cursor-pointer z-3'><X className='text-white w-10 h-10' onClick={() => setMostrarVideo(false)}></X></div>
-              <div id='video' className='flex w-screen h-screen absolute items-center z-2'>
-  
-                  <iframe src='https://www.youtube.com/embed/kkhe6m3cQc4' className='flex rounded-2xl h-8/10 center w-8/10'></iframe> 
-                  
-              </div>
-              <div className='w-screen absolute  h-screen bg-black opacity-80'></div>
-            </div>
-          }
         </section>
 
         <section id='sobre' className='mt-10 mb-20'>
