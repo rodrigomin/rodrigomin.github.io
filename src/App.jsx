@@ -113,7 +113,7 @@ function App() {
                   <iframe src='https://www.youtube.com/embed/kkhe6m3cQc4' className='flex rounded-2xl h-8/10 center w-8/10'></iframe> 
                   
               </div>
-              <div class='loader'></div>
+              <div className='loader'></div>
               <div className='w-screen absolute  h-screen bg-black opacity-80'></div>
             </div>
         }
